@@ -1,5 +1,4 @@
-import React from 'react'
-import styles from './friendsItem.scss';
+import styles from './friendItem.scss';
 import PropTypes from 'prop-types'
 
 <li class="item">
