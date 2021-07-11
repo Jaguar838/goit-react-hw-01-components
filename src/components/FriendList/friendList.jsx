@@ -1,6 +1,16 @@
 import styles from './friendList.scss';
 import PropTypes from 'prop-types'
+import FriendItem from './friendItem'
 
-<ul class="friend-list">
-
-</ul>
+export const FriendList = ({ friends }) => (
+  <ul className="friend-list">
+    {friends.map(item => (
+      <FriendItem
+        key={item.id}
+        avatar={item.avatar}
+        name={item.name}
+        isOnline={item.isOnline}
+      />
+    ))}
+  </ul>
+);
