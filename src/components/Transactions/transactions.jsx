@@ -1,9 +1,9 @@
-import styles from './transaction.module.scss';
+import styles from './Transaction.module.scss';
 import PropTypes from 'prop-types'
 
 export const Transactions=({}) => {
   return (
-<table class="transactionHistory">
+<table classNane={styles.transactionHistory}>
   <thead>
     <tr>
       <th>Type</th>
