@@ -1,4 +1,4 @@
-import styles from './transaction.scss';
+import styles from './transaction.module.scss';
 import PropTypes from 'prop-types'
 
 export const Transactions=({}) => {
