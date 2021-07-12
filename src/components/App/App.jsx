@@ -19,7 +19,9 @@ import Transactions from '../Transactions/transactions';
 const App = () => {
     return (
         <>
-            <Container>Hello World</Container>
+            <Container>Hello World
+             <FriendList/>
+            </Container>
         </>
     );
 }
