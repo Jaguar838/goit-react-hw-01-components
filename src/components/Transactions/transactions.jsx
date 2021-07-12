@@ -1,7 +1,8 @@
 import styles from './transaction.scss';
 import PropTypes from 'prop-types'
 
-
+export const Transactions=({}) => {
+  return (
 <table class="transaction-history">
   <thead>
     <tr>
@@ -24,3 +25,18 @@ import PropTypes from 'prop-types'
     </tr>
   </tbody>
 </table>
+  )
+}
+
+
+Transactions.propTypes={
+  items:PropTypes.arrayOf(
+      PropTypes.shape({
+          id:PropTypes.string.isRequired,
+          type:PropTypes.string.isRequired,
+          amount: PropTypes.string.isRequired,
+          currency: PropTypes.string.isRequired,}
+
+      ).isRequired
+  ).isRequired
+}
