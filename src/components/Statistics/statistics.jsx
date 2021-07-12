@@ -1,7 +1,7 @@
 import styles from './Statistics.module.scss';
 import PropTypes from 'prop-types';
 
-const StatisticsItem =({id, label, persentage}) => {
+const StatisticsItem =({id, label, percentage}) => {
   return (
     <li key={id} className={styles.item}>
       <span className={styles.label}>{label}</span>

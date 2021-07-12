@@ -1,36 +1,40 @@
 import styles from './Transaction.module.scss';
 import PropTypes from 'prop-types'
 
-export const Transactions=({}) => {
+const TransactionsTr = ({id, type, amount, currency}) => {
+  return (
+          <tr key={id}>
+          <td>{type}</td>
+          <td>{amount}</td>
+          <td>{currency}</td>
+          </tr>
+      )
+}
+
+const TransactionsBody = (items) => {
+if (items.length ===0) return null
+  return <tbody className={styles.tbody}>{items.map(TransactionsTr)}</tbody>
+}
+
+export const Transactions=({transactions}) => {
   return (
 <table classNane={styles.transactionHistory}>
-  <thead>
+  <thead classNane={styles.thead}>
     <tr>
       <th>Type</th>
       <th>Amount</th>
       <th>Currency</th>
     </tr>
   </thead>
+<TransactionsBody items={transactions}/>
 
-  <tbody>
-    <tr>
-      <td>Invoice</td>
-      <td>125</td>
-      <td>USD</td>
-    </tr>
-    <tr>
-      <td>Withdrawal</td>
-      <td>85</td>
-      <td>USD</td>
-    </tr>
-  </tbody>
 </table>
   )
 }
 
 
 Transactions.propTypes={
-  items:PropTypes.arrayOf(
+  transactionss:PropTypes.arrayOf(
       PropTypes.shape({
           id:PropTypes.string.isRequired,
           type:PropTypes.string.isRequired,
