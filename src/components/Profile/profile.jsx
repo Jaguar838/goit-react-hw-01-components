@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import { StatsProfile } from './statsProfile';
 import styles from './Profile.module.scss';
+import defaultAvatar from '../../server/avatarNone.jpg'
 
 
-export const Profile = ({ avatar, name, tag, location, stats }) => {
+export const Profile = ({ avatar = defaultAvatar, name, tag, location, stats }) => {
   return (
     <div className={styles.profile}>
       <div className={styles.description}>
