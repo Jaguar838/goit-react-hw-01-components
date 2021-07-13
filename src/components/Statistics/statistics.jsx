@@ -4,7 +4,7 @@ import {randomColor, randomRGBColor} from './getRandomColor';
 
 const StatisticsItem =({id, label, percentage}) => {
   return (
-    <li key={id} className={styles.item} style={{ backgroundColor: `${randomRGBColor()}` }}>
+    <li key={id} className={styles.item} style={{ backgroundColor: `${randomRGBColor(randomColor)}` }}>
       <span className={styles.label}>{label}</span>
       <span className={styles.percentage}>{percentage}%</span>
     </li>
