@@ -1,10 +1,10 @@
 import styles from './Statistics.module.scss';
 import PropTypes from 'prop-types';
-import {RGB} from './getRandomColor';
+import {randomColor randomRGB} from './getRandomColor';
 
 const StatisticsItem =({id, label, percentage}) => {
   return (
-    <li key={id} className={styles.item} style={{ backgroundColor: `${RGB()}` }}>
+    <li key={id} className={styles.item} style={{ backgroundColor: `${randomRGB()}` }}>
       <span className={styles.label}>{label}</span>
       <span className={styles.percentage}>{percentage}%</span>
     </li>
