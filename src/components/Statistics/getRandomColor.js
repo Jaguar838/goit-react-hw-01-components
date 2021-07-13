@@ -1,7 +1,6 @@
-export const RGB = () => {
-    const r = Math.round(Math.random() * 256);
-    const g = Math.round(Math.random() * 256);
-    const b = Math.round(Math.random() * 256);
-    return `rgb(${r}, ${g}, ${b})`;
-};
+const randomColor = () => Math.round(Math.random() * 256);
+const randomRGBColor = callback =>
+  `rgb(${callback()}, ${callback()}, ${callback()})`;
+
+export { randomColor, randomRGBColor };
 
