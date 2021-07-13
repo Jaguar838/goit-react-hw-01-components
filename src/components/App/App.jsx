@@ -12,7 +12,6 @@ import friendsData from '../../server/friends.json';
 import transactionsData from '../../server/transactions.json';
 
 
-
 const App = () => {
     return (
         <>
@@ -20,7 +19,7 @@ const App = () => {
              <Profile avatar={userData.avatar} name={userData.name} tag={userData.tag} location={userData.location} stats={userData.stats}/>   
              <Statistics items={statsData}/>
              <FriendList friends={friendsData}/>
-             {/* <Transactions transactions={transactionsData}/> */}
+            <Transactions transactions={transactionsData} />
             </Container>
         </>
     );
