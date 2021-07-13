@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
-import styles from './FriendItem.module.scss';
+import css from './FriendItem.module.scss';
 
-export const FriendItem = ({ avatar, name, isOnline, id }) => {
-  const onlineStatus = isOnline ? styles.online : styles.offline;
+export const FriendItem = ({ avatar, name, isOnline }) => {
+  const onlineStatus = isOnline ? css.online : css.offline;
   console.log({ onlineStatus }, isOnline);
   return (
-    <li key={id} className={styles.item}>
-      <span className={`${styles.status} ${onlineStatus}`}></span>
-      <img className={styles.avatarFriends} src={avatar} alt={name} width="48" />
-      <p className={styles.name}>{name}</p>
+    <li className={css.item}>
+      <span className={`${css.status} ${onlineStatus}`}></span>
+      <img className={css.avatarFriends} src={avatar} alt={name} width="48" />
+      <p className={css.name}>{name}</p>
     </li>
   );
 };

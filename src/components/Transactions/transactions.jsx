@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
-import styles from './Transaction.module.scss';
+import css from './Transaction.module.scss';
 
-const TransactionsTr = ({ id, type, amount, currency }, i) => {
-  const trStyle = i % 2 === 1 ? styles.grey : styles.white;
+const TransactionsTr = ({ type, amount, currency }, i) => {
+  const trStyle = i % 2 === 1 ? css.grey : css.white;
   return (
-    <tr className={trStyle} key={id}>
+    <tr className={trStyle}>
       <td>{type}</td>
       <td>{amount}</td>
       <td>{currency}</td>
@@ -14,13 +14,19 @@ const TransactionsTr = ({ id, type, amount, currency }, i) => {
 
 const TransactionsBody = ({ items }) => {
   if (items.length === 0) return null;
-  return <tbody className={styles.tbody}>{items.map(TransactionsTr)}</tbody>;
+  return (
+    <tbody className={css.tbody}>
+      {items.map(({ id, type, amount, currency }) => (
+        <TransactionsTr key={id} type={type} amount={amount} currency={currency} />
+      ))}
+    </tbody>
+  );
 };
 
 export const Transactions = ({ transactions }) => {
   return (
-    <table className={styles.transactionHistory}>
-      <thead className={styles.thead}>
+    <table className={css.transactionHistory}>
+      <thead className={css.thead}>
         <tr>
           <th>Type</th>
           <th>Amount</th>
