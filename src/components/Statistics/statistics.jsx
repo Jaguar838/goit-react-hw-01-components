@@ -16,10 +16,10 @@ const StatisticsList =({items}) => {
     return <ul className={styles.statList}>{items.map(StatisticsItem)}</ul>
 }
 
-export const Statistics = ({items}) => {
+export const Statistics = ({items, title}) => {
   return (
     <section className={styles.statistics}>
-    <h2 className={styles.title}>Upload stats</h2>
+    {title ? <h2 className={styles.title}>{title}</h2> : ""}
   <StatisticsList items={items}/>
   </section>
 )
