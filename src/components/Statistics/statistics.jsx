@@ -1,6 +1,6 @@
 import styles from './Statistics.module.scss';
 import PropTypes from 'prop-types';
-import {randomColor, randomRGB} from './getRandomColor';
+import {randomColor, randomRGBColor} from './getRandomColor';
 
 const StatisticsItem =({id, label, percentage}) => {
   return (
