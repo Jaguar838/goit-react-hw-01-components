@@ -3,7 +3,7 @@ import styles from './FriendItem.module.scss';
 
 export const FriendItem = ({ avatar, name, isOnline, id }) => {
   const onlineStatus = isOnline ? styles.online : styles.offline;
-  console.log(onlineStatus, isOnline);
+  console.log({ onlineStatus }, isOnline);
   return (
     <li key={id} className={styles.item}>
       <span className={onlineStatus}>{isOnline}</span>

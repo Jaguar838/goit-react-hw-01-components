@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import styles from './Transaction.module.scss';
 
-const TransactionsTr = ({ id, type, amount, currency }) => {
+const TransactionsTr = ({ id, type, amount, currency }, i) => {
+  const trStyle = i % 2 === 1 ? styles.grey : styles.white;
   return (
-    <tr key={id}>
+    <tr className={trStyle} key={id}>
       <td>{type}</td>
       <td>{amount}</td>
       <td>{currency}</td>
