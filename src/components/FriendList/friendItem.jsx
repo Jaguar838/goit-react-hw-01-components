@@ -6,7 +6,7 @@ export const FriendItem = ({ avatar, name, isOnline, id }) => {
   console.log({ onlineStatus }, isOnline);
   return (
     <li key={id} className={styles.item}>
-      <span className={onlineStatus}>{isOnline}</span>
+      <span className={`${styles.status} ${onlineStatus}`}></span>
       <img className={styles.avatarFriends} src={avatar} alt={name} width="48" />
       <p className={styles.name}>{name}</p>
     </li>
