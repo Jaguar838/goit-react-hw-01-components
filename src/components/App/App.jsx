@@ -1,9 +1,9 @@
 import React from 'react';
-import { Container } from '../Container/Container';
-import { Profile } from '../Profile/profile';
-import { Statistics } from '../Statistics/statistics';
-import { FriendList } from '../FriendList/friendList';
-import { Transactions } from '../Transactions/transactions';
+import { Container } from '../Container';
+import { Profile } from '../Profile';
+import { Statistics } from '../Statistics';
+import { FriendList } from '../FriendList';
+import { Transactions } from '../Transactions';
 
 import userData from '../../server/user.json';
 import statsData from '../../server/stats.json';
