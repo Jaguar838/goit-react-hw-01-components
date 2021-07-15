@@ -13,8 +13,13 @@ export const FriendItem = ({ avatar, name, isOnline }) => {
   );
 };
 
+FriendItem.defaultProps = {
+  avatar:
+    'https://www.clearmountainbank.com/wp-content/uploads/2020/04/male-placeholder-image.jpeg',
+  name: '(empty)',
+};
+
 FriendItem.propTypes = {
-  id: PropTypes.node.isRequired,
   name: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
   isOnline: PropTypes.bool.isRequired,

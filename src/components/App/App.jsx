@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from '../Container/container';
+import { Container } from '../Container/Container';
 import { Profile } from '../Profile/profile';
 import { Statistics } from '../Statistics/statistics';
 import { FriendList } from '../FriendList/friendList';
